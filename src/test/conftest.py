@@ -6,6 +6,4 @@ def web_driver(web_driver, url):
 
     yield web_driver
 
-
-
     web_driver.quit()
