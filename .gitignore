@@ -1,0 +1,24 @@
+# VS Code
+.vscode/*
+debug.log
+
+# PyTest
+.pytest_cache/*
+__pycache__
+
+# Mozilla Firefox logs
+geckodriver.log
+
+# Screenshots o evidencia de los escenarios de prueba
+*.png
+
+# Modulo para eliminar evidendias o screenshots
+test_clean.py
+
+src/target/reports/*
+!src/target/reports/categories.json
+
+.DS_Store
+archive/*
+output.json
+pytest_html_report.html
