@@ -5,12 +5,15 @@ This module contains google home page elements
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from pyshadow.main import Shadow
 
 class HomePage:
 
     def __init__(self, browser):
         self.browser = browser
         self.wait = WebDriverWait(browser, 120)
+        self.shadow = Shadow(browser)
+
 
     @classmethod
     def search_bar_input(cls):
@@ -39,3 +42,10 @@ class HomePage:
         """
         click_search = self.browser.find_elements(*self.buttons_input())
         click_search[3].send_keys()
+
+    def click_login_button(self):
+        """
+        Click search button
+        """
+        click_login = self.shadow.find_element("paper-button")
+        click_login.click()
